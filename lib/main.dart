@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print, camel_case_types
 
+import 'package:assignment1/question.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,6 +24,17 @@ class assignment1 extends StatefulWidget {
 }
 
 class _assignment1State extends State<assignment1> {
+
+  var _questionIndex = 0;
+  void _answerQuestion (){
+    setState(() {
+
+      _questionIndex = _questionIndex + 1;
+    });
+
+    print(_questionIndex);
+
+   }
   @override
   Widget build(BuildContext context) {
     var questions = [
@@ -32,11 +44,7 @@ class _assignment1State extends State<assignment1> {
       "Flutter is developed by which company?",
     ];
 
-    var questionIn = 0;
-    int questionIndexs() {
-      questionIn = questionIn + 1;
-      return questionIn;
-    }
+
 
     return Scaffold(
         appBar: AppBar(
@@ -47,10 +55,8 @@ class _assignment1State extends State<assignment1> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
-              questions.first,
-              style: const TextStyle(fontSize: 20, color: Colors.black),
-              textAlign: TextAlign.center,
+            Questions(
+              questions[_questionIndex]
             ),
 
             //    ----------------------------------------------------------------------//
@@ -59,7 +65,7 @@ class _assignment1State extends State<assignment1> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.pink),
                   onPressed: () {
-                    print("Clicked");
+                    _answerQuestion();
                   },
                   child: const Text("Hi"),
                 )),
@@ -69,7 +75,7 @@ class _assignment1State extends State<assignment1> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.pink),
                   onPressed: () {
-                    print("Clicked");
+                    _answerQuestion();
                   },
                   child: const Text("Hi"),
                 )),
@@ -81,7 +87,7 @@ class _assignment1State extends State<assignment1> {
 
                   onPressed: () {
                     // ignore: avoid_print
-                    print("Clicked");
+                    _answerQuestion();
                   },
                   child: const Text("Hi"),
                 )),
@@ -92,7 +98,7 @@ class _assignment1State extends State<assignment1> {
                   style: ElevatedButton.styleFrom(primary: Colors.pink),
                   onPressed: () {
                     // ignore: avoid_print
-                    print("Clicked");
+                    _answerQuestion;
                   },
                   child: const Text("Hi"),
                 )),
