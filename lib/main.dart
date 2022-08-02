@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print, camel_case_types
 
+import 'package:assignment1/answer.dart';
 import 'package:assignment1/question.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,6 @@ class _assignment1State extends State<assignment1> {
   var _questionIndex = 0;
   void _answerQuestion (){
     setState(() {
-
       _questionIndex = _questionIndex + 1;
     });
 
@@ -38,10 +38,29 @@ class _assignment1State extends State<assignment1> {
   @override
   Widget build(BuildContext context) {
     var questions = [
-      'Who is the father of Computer?',
-      "Who was the first man landed on moon?",
-      "Who was the first programmer?",
-      "Flutter is developed by which company?",
+      {'question' : 'Who is the father of Computer?',
+        'answer' : ['Charles Babbage', 'Charli Puth', 'Neil Armstrong', 'James Bond']
+      },
+
+      { 'question': '1 Terabyte (Tb) =',
+        'answer' : [ '1,024', '1000', '1200', '1275']
+      },
+
+      {'question': "Which among the following period is known as the era of second generation computer?",
+        'answer' : ['1951 to 1959', '1959 to 1965', '1971 to 1979', '1981 to 1991']
+      },
+
+      {'question': "If you need to paste the contents of MS Word, which command will you give?",
+        'answer': ['Ctrl + A,', 'Ctrl + C', 'Ctrl + V', 'Ctrl + Z'],
+      },
+
+      {'question': "Who was the first programmer?",
+        'answer' : ['Lady Ada', 'Madam Curie', 'James Bond', 'Graham Bell'],
+      },
+
+      {'question': "Flutter is develop by which company?",
+        'answer': ['Google', 'AWS', 'CRED', 'Meta']
+      },
     ];
 
 
@@ -56,52 +75,18 @@ class _assignment1State extends State<assignment1> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Questions(
-              questions[_questionIndex]
+              questions[_questionIndex]['question'] as String,
             ),
+            ...(questions[_questionIndex]['answer'] as List<String>).map((answer){
+              return Answer( _answerQuestion,answer);
+            }).toList()
 
             //    ----------------------------------------------------------------------//
-            Padding(
-                padding: const EdgeInsets.only(top: 25),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.pink),
-                  onPressed: () {
-                    _answerQuestion();
-                  },
-                  child: const Text("Hi"),
-                )),
-            Padding(
-                padding: const EdgeInsets.only(top : 25),
-                child:
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.pink),
-                  onPressed: () {
-                    _answerQuestion();
-                  },
-                  child: const Text("Hi"),
-                )),
-            Padding(
-                padding: const EdgeInsets.only(top : 25),
-                child:
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.pink),
-
-                  onPressed: () {
-                    // ignore: avoid_print
-                    _answerQuestion();
-                  },
-                  child: const Text("Hi"),
-                )),
-            Padding(
-                padding: const EdgeInsets.only(top : 25),
-                child:
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.pink),
-                  onPressed: () {
-                    // ignore: avoid_print
-                    _answerQuestion;
-                  },
-                  child: const Text("Hi"),
-                )),
+            //Answer(_answerQuestion),
+            //Answer(_answerQuestion),
+            //Answer(_answerQuestion),
+           //
+            // Answer(_answerQuestion),
           ],
         ));
   }
