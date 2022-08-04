@@ -26,6 +26,32 @@ class assignment1 extends StatefulWidget {
 
 class _assignment1State extends State<assignment1> {
 
+  final questions = const  [
+    {'question' : 'Who is the father of Computer?',
+      'answer' : ['Charles Babbage', 'Charli Puth', 'Neil Armstrong', 'James Bond']
+    },
+
+    { 'question': '1 Terabyte (Tb) =',
+      'answer' : [ '1,024', '1000', '1200', '1275']
+    },
+
+    {'question': "Which among the following period is known as the era of second generation computer?",
+      'answer' : ['1951 to 1959', '1959 to 1965', '1971 to 1979', '1981 to 1991']
+    },
+
+    {'question': "If you need to paste the contents of MS Word, which command will you give?",
+      'answer': ['Ctrl + A,', 'Ctrl + C', 'Ctrl + V', 'Ctrl + Z'],
+    },
+
+    {'question': "Who was the first programmer?",
+      'answer' : ['Lady Ada', 'Madam Curie', 'James Bond', 'Graham Bell'],
+    },
+
+    {'question': "Flutter is develop by which company?",
+      'answer': ['Google', 'AWS', 'CRED', 'Meta']
+    },
+  ];
+  //======================================================================================================================
   var _questionIndex = 0;
   void _answerQuestion (){
     setState(() {
@@ -33,44 +59,22 @@ class _assignment1State extends State<assignment1> {
     });
 
     print(_questionIndex);
+    if ( _questionIndex <= questions.length) {
+      return Score();
+    }
 
    }
   @override
   Widget build(BuildContext context) {
-    var questions = [
-      {'question' : 'Who is the father of Computer?',
-        'answer' : ['Charles Babbage', 'Charli Puth', 'Neil Armstrong', 'James Bond']
-      },
-
-      { 'question': '1 Terabyte (Tb) =',
-        'answer' : [ '1,024', '1000', '1200', '1275']
-      },
-
-      {'question': "Which among the following period is known as the era of second generation computer?",
-        'answer' : ['1951 to 1959', '1959 to 1965', '1971 to 1979', '1981 to 1991']
-      },
-
-      {'question': "If you need to paste the contents of MS Word, which command will you give?",
-        'answer': ['Ctrl + A,', 'Ctrl + C', 'Ctrl + V', 'Ctrl + Z'],
-      },
-
-      {'question': "Who was the first programmer?",
-        'answer' : ['Lady Ada', 'Madam Curie', 'James Bond', 'Graham Bell'],
-      },
-
-      {'question': "Flutter is develop by which company?",
-        'answer': ['Google', 'AWS', 'CRED', 'Meta']
-      },
-    ];
-
-
 
     return Scaffold(
         appBar: AppBar(
           title: const Text("Assignment 1"),
           centerTitle: true,
         ),
-        body: Column(
+        body: SingleChildScrollView(
+    child:
+        Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -87,7 +91,7 @@ class _assignment1State extends State<assignment1> {
             //Answer(_answerQuestion),
            //
             // Answer(_answerQuestion),
-          ],
+          ],),
         ));
   }
 }

@@ -10,14 +10,15 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ElevatedButton(
+    return Column(
+      children: [
+      //width: double.infinity,
+      //child:
+      ElevatedButton(
         style: ElevatedButton.styleFrom(primary: Colors.pink),
-        onPressed: () {
-         null;
-        },
         child: Text(answers),
-      )
+        onPressed: selectHandler(),
+      )]
     );
   }
 }
