@@ -10,16 +10,17 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
+    return Column(children: [
       //width: double.infinity,
       //child:
       ElevatedButton(
         style: ElevatedButton.styleFrom(primary: Colors.pink),
         child: Text(answers),
-        onPressed: selectHandler(),
-      )]
-    );
+        onPressed: () {
+          print(answers);
+        },
+        //selectHandler(),
+      )
+    ]);
   }
 }
-
