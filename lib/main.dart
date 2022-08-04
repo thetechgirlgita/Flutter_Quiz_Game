@@ -15,6 +15,9 @@ class Assignment1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: backGround,
+      ),
       home: assignment1(),
     );
   }
@@ -74,11 +77,17 @@ class _assignment1State extends State<assignment1> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const GlowText(" Computer's Basic Quiz"),
+          title:  GlowText(" Computer's Basic Quiz",
+            style: TextStyle(
+              color: Appbar,
+            ),
+          ),
           centerTitle: true,
           backgroundColor: backGround,
         ),
         body: SingleChildScrollView(
+
+
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,

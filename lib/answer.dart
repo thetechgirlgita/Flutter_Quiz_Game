@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
@@ -10,17 +11,32 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return
       //width: double.infinity,
-      //child:
+
+    Padding(
+    padding: EdgeInsets.only(top:20),
+
+    child:
+        Container(
+          width: MediaQuery.of(context).size.width/3,
+          height: 50,
+          decoration: BoxDecoration(
+            borderRadius:  BorderRadius.only(
+              topLeft: Radius.circular(10),
+                ),
+
+
+            ),
+
+    child:
       ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: Colors.pink),
+        style: ElevatedButton.styleFrom(primary: Colors.transparent),
         child: Text(answers),
         onPressed: () {
           print(answers);
-        },
+        },),),
         //selectHandler(),
-      )
-    ]);
+      );
   }
 }

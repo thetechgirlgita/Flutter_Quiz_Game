@@ -9,7 +9,7 @@ class Questions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //color: backGround,
+      color: backGround,
       width: double.infinity,
       margin: EdgeInsets.all(20),
       child: Column(children: [
