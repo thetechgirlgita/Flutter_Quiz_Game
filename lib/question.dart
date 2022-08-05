@@ -11,7 +11,7 @@ class Questions extends StatelessWidget {
     return Container(
       color: backGround,
       width: double.infinity,
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: Column(children: [
         Text(
           QuestionText,
