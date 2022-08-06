@@ -6,6 +6,8 @@ import 'package:assignment1/answer.dart';
 import 'package:assignment1/question.dart';
 import 'package:flutter/material.dart';
 
+import 'finalPage.dart';
+
 void main() {
   runApp(Assignment1());
 }
@@ -70,14 +72,14 @@ class _assignment1State extends State<assignment1> {
       _questionIndex = _questionIndex + 1;
     });
 
-    print(_questionIndex);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title:  GlowText(" Computer's Basic Quiz",
+          title: GlowText(
+            "Computer's Basic Quiz",
             style: TextStyle(
               color: Appbar,
             ),
@@ -85,10 +87,8 @@ class _assignment1State extends State<assignment1> {
           centerTitle: true,
           backgroundColor: backGround,
         ),
-        body: SingleChildScrollView(
-
-
-          child: Column(
+        body:  _questionIndex < questions.length ?
+    Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -100,7 +100,8 @@ class _assignment1State extends State<assignment1> {
                 return Answer(_answerQuestion, answer);
               }).toList()
             ],
-          ),
-        ));
+        ) : finalPage(),
+
+    );
   }
 }
