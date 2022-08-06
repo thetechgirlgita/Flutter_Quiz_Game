@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
-  final Function selectHandler;
+  final VoidCallback selectHandler;
   final String answers;
 
   Answer(this.selectHandler, this.answers);
@@ -29,7 +29,9 @@ class Answer extends StatelessWidget {
           style: ElevatedButton.styleFrom(primary: Colors.transparent),
           child: Text(answers),
           onPressed: () {
-            print(answers);
+            print (selectHandler);
+         selectHandler();
+
           },
         ),
       ),

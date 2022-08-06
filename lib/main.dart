@@ -7,11 +7,11 @@ import 'package:assignment1/question.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Assignment1());
+  runApp(Assignment1());
 }
 
 class Assignment1 extends StatelessWidget {
-  const Assignment1({Key? key}) : super(key: key);
+  //const Assignment1({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
