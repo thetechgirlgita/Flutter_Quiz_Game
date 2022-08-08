@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_glow/flutter_glow.dart';
+import 'Colors.dart';
 
 
 class finalPage extends StatefulWidget {
@@ -22,32 +23,36 @@ class _finalPageState extends State<finalPage> {
           child:
           Container(
 
-            width: MediaQuery.of(context).size.width/1.6,
-            height: MediaQuery.of(context).size.height/3.5,
+            width: MediaQuery.of(context).size.width/1.9,
+            height: MediaQuery.of(context).size.height/4.5,
             decoration:  BoxDecoration(
-              color: Colors.transparent,
+              color: backGround,
               borderRadius:  BorderRadius.circular(12),
               boxShadow: const [
                 BoxShadow(
                   color: Colors.amber,
-                  offset: Offset(-4,4),
+                  offset: Offset(-4,-4),
                   blurRadius : 10,
                   spreadRadius: 1,
                 ),
                 BoxShadow(
-                  color: Colors.black,
-                  offset: Offset(4,4),
+                  offset: Offset(-4,-4),
                   spreadRadius: 1,
                   blurRadius: 10
                 )
               ]
             ),
-            child: const Text("Score",
+            child: Padding(
+              padding: EdgeInsets.only(top : MediaQuery.of(context).size.height/14),
+            child:
+            const GlowText("Score",
               style: TextStyle(
-                fontSize: 50,
-                color: Colors.yellowAccent,
-              ),)
+                fontSize: 40,
+                color: Colors.amber,
+              ),
+              textAlign: TextAlign.center,
             )
+            )),
           )
         ],
       )
