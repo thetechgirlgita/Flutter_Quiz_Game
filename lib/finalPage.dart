@@ -25,7 +25,22 @@ class _finalPageState extends State<finalPage> {
             width: MediaQuery.of(context).size.width/1.6,
             height: MediaQuery.of(context).size.height/3.5,
             decoration:  BoxDecoration(
-              color: Colors.white,
+              color: Colors.transparent,
+              borderRadius:  BorderRadius.circular(12),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.amber,
+                  offset: Offset(-4,4),
+                  blurRadius : 10,
+                  spreadRadius: 1,
+                ),
+                BoxShadow(
+                  color: Colors.black,
+                  offset: Offset(4,4),
+                  spreadRadius: 1,
+                  blurRadius: 10
+                )
+              ]
             ),
             child: const Text("Score",
               style: TextStyle(
