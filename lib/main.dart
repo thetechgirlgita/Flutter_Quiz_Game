@@ -67,8 +67,15 @@ class _assignment1State extends State<assignment1> {
     {
       'question':
           "If you need to paste the contents of MS Word, which command will you give?",
-      'answer': ['Ctrl + A,', 'Ctrl + C', 'Ctrl + V', 'Ctrl + Z'],
+      'answer':
+      [
+        {'text':'Ctrl + A', 'score': 0},
+        { 'text':'Ctrl + C','score' : 0},
+        { 'text':'Ctrl + V','score': 1},
+        { 'text':'Ctrl + Z', 'score': 0},
+      ],
     },
+    //-------------------------------------------------------------------------------------------------------------------------------------------------//
     {
       'question': "Who was the first programmer?",
       'answer': ['Lady Ada', 'Madam Curie', 'James Bond', 'Graham Bell'],
