@@ -36,12 +36,12 @@ class _assignment1State extends State<assignment1> {
     {
       'question': 'Who is the father of Computer?',
       'answer': [
-        'Charles Babbage',
-        'Charli Puth',
-        'Neil Armstrong',
-        'James Bond'
-      ]
-    },
+        {'text':'Charles Babbage', 'score': 0},
+        {'text':'Charli Puth', 'score': 0},
+        {'text': 'Neil Armstrong', 'score': 0}  ,
+        {'text':'James Bond', 'score': 0}
+      ]},
+    //-----------------------------------------------------------------------------------------------------------------------------------//
     {
       'question': '1 Terabyte (Tb) =',
       'answer': ['1,024', '1000', '1200', '1275']
