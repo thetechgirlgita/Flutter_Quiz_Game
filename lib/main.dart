@@ -65,6 +65,18 @@ class _assignment1State extends State<assignment1> {
         {'text':'1981 to 1991', 'score': 0}
         ]
     },
+    //-----------------------------------------------------------------------------------------//
+    {
+    'question':
+    "IC chips used in computers are usually made of:",
+    'answer':
+    [
+    {'text':'Lead', 'score': 0},
+    {'text':'Silicon', 'score': 1},
+    {'text':'Chromium', 'score': 0},
+    {'text':'Gold', 'score': 0}
+]
+},
     //------------------------------------------------------------------------------------------------------------------------------------------------//
     {
       'question':
