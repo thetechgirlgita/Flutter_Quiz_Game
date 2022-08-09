@@ -30,9 +30,8 @@ class Answer extends StatelessWidget {
           style: ElevatedButton.styleFrom(primary: Colors.transparent),
           child: Text(answers),
           onPressed: () {
-            print (selectHandler);
-         selectHandler();
-
+            print(selectHandler);
+            selectHandler();
           },
         ),
       ),
