@@ -78,8 +78,15 @@ class _assignment1State extends State<assignment1> {
     //-------------------------------------------------------------------------------------------------------------------------------------------------//
     {
       'question': "Who was the first programmer?",
-      'answer': ['Lady Ada', 'Madam Curie', 'James Bond', 'Graham Bell'],
+      'answer':
+      [
+        {'text':'Lady Ada', 'score': 1},
+        {'text':'Madam Curie', 'score': 0},
+        {'text':'James Bond', 'score': 0},
+        {'text':'Graham Bell', 'score': 0}
+      ],
     },
+    //-------------------------------------------------------------------------------------------------------------------------------------------------//
     {
       'question': "Flutter is develop by which company?",
       'answer': ['Google', 'AWS', 'CRED', 'Meta']
