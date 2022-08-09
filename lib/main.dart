@@ -5,8 +5,10 @@ import 'package:flutter_glow/flutter_glow.dart';
 import 'package:assignment1/answer.dart';
 import 'package:assignment1/question.dart';
 import 'package:flutter/material.dart';
+import 'score.dart';
 
-import 'finalPage.dart';
+
+
 
 void main() {
   runApp(Assignment1());
@@ -103,9 +105,9 @@ class _assignment1State extends State<assignment1> {
 
    var totalScore = 0;
   void _answerQuestion(int score) {
-    score = totalScore + score;
-    setState(() {
 
+    setState(() {
+      totalScore = score + totalScore;
       _questionIndex = _questionIndex + 1;
     });
 
@@ -132,13 +134,14 @@ class _assignment1State extends State<assignment1> {
               Questions(
                 questions[_questionIndex]['question'] as String,
               ),
-              ...(questions[_questionIndex]['answer'] as List<Map<String, Object>>)
+              ...(questions[_questionIndex]['answer'] as List<Map<String, dynamic>>)
                   .map((answer) {
-                return Answer(() => _answerQuestion(answer[ 'score']) , answer['text'] as String);
-              }).toList()
-            ],
-        ) : finalPage(),
+                return Answer(() => _answerQuestion(answer['score']),
+                    answer['text'] as String, answer['score'] as int);
+              }).toList(),],
+    ) : ScoreList(totalScore),
 
-    );
+
+        );
   }
 }
