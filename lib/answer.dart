@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Colors.dart';
+
 class Answer extends StatelessWidget {
   final VoidCallback selectHandler;
   final String answers;
@@ -19,13 +21,17 @@ class Answer extends StatelessWidget {
       padding: EdgeInsets.only(top: 20),
 
       child: Container(
-        width: MediaQuery.of(context).size.width / 3,
-        height: 50,
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(10),
-          ),
-        ),
+        width: MediaQuery.of(context).size.width / 6,
+        height: MediaQuery.of(context).size.height / 10,
+        decoration: BoxDecoration(
+            color: backGround,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: const [
+              BoxShadow(
+                  offset: Offset(-1, -1),
+                  spreadRadius: 2,
+                  blurRadius: 6)
+            ]),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(primary: Colors.transparent),
           child: Text(answers),

@@ -57,7 +57,7 @@ class _assignment1State extends State<assignment1> {
           "Which among the following period is known as the era of second generation computer?",
       'answer': [
         {'text': '1951 to 1959', 'score': 0},
-        {'text': '1959 to 1965', 'score': 0},
+        {'text': '1959 to 1965', 'score': 1},
         {'text': '1971 to 1979', 'score': 0},
         {'text': '1981 to 1991', 'score': 0}
       ]

@@ -15,11 +15,11 @@ class ScoreList extends StatelessWidget {
 
   String get SomeText {
     var ResultText;
-    if (resultScore <= 8) {
+    if (resultScore >= 8) {
       ResultText = 'You did awesome at this quiz';
-    } else if (resultScore >= 0) {
+    } else if (resultScore <= 4) {
       ResultText = 'Dude, You need to study, It is very bad';
-    } else if (resultScore <= 3 || resultScore >= 1) {
+    } else if (resultScore <= 5 || resultScore >= 1) {
       ResultText = 'Better Next time dude';
     }
     return ResultText;
