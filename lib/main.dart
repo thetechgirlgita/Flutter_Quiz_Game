@@ -89,6 +89,18 @@ class _assignment1State extends State<assignment1> {
         {'text':'1248 bytes', 'score': 0}
       ]
     },
+    //---------------------------------------------------------------------------------------------------------------------//
+    {
+      'question':
+      "Compact discs, (according to the original CD specifications) hold how many minutes of music?",
+      'answer':
+      [
+        {'text':'74 mins', 'score': 1},
+        {'text':'90 mins', 'score': 0},
+        {'text':'56 mins', 'score': 0},
+        {'text':'0 mins', 'score': 0}
+      ]
+    },
     //------------------------------------------------------------------------------------------------------------------------------------------------//
     {
       'question':
