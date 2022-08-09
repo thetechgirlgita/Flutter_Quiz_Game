@@ -36,11 +36,11 @@ class _finalPageState extends State<finalPage> {
                           color: Colors.amber,
                           offset: Offset(-4, -4),
                           blurRadius: 10,
-                          spreadRadius: 1,
+                          spreadRadius: 1.5,
                         ),
                         BoxShadow(
                             offset: Offset(-4, -4),
-                            spreadRadius: 1,
+                            spreadRadius: 1.5,
                             blurRadius: 10)
                       ]),
                   child: Padding(
@@ -49,13 +49,17 @@ class _finalPageState extends State<finalPage> {
                       child: const GlowText(
                         "Score",
                         style: TextStyle(
-                          fontSize: 35,
+                          fontSize: 38,
                           color: Colors.amber,
                         ),
                         textAlign: TextAlign.center,
-                      ))),
-            ))
+                      )
+                  )
+              ),
+            )
+        )
       ],
-    ));
+    )
+    );
   }
 }
