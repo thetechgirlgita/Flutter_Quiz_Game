@@ -36,7 +36,7 @@ class _assignment1State extends State<assignment1> {
     {
       'question': 'Who is the father of Computer?',
       'answer': [
-        {'text':'Charles Babbage', 'score': 0},
+        {'text':'Charles Babbage', 'score': 1},
         {'text':'Charli Puth', 'score': 0},
         {'text': 'Neil Armstrong', 'score': 0}  ,
         {'text':'James Bond', 'score': 0}
@@ -44,8 +44,14 @@ class _assignment1State extends State<assignment1> {
     //-----------------------------------------------------------------------------------------------------------------------------------//
     {
       'question': '1 Terabyte (Tb) =',
-      'answer': ['1,024', '1000', '1200', '1275']
+      'answer': [
+        {'text':'1,024', 'score': 1},
+        {'text':'1000','score': 0},
+        {'text':'1200', 'score': 0},
+        {'text':'1275', 'score': 0},
+      ]
     },
+    //-------------------------------------------------------------------------------------------------------------------------------------------//
     {
       'question':
           "Which among the following period is known as the era of second generation computer?",
