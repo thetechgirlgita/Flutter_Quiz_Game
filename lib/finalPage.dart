@@ -2,15 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_glow/flutter_glow.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'Colors.dart';
+import 'main.dart';
 
 class finalPage extends StatefulWidget {
-  const finalPage({Key? key}) : super(key: key);
+ // const finalPage({Key? key}) : super(key: key);
+
+
+
 
   @override
   _finalPageState createState() => _finalPageState();
 }
 
 class _finalPageState extends State<finalPage> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +53,7 @@ class _finalPageState extends State<finalPage> {
                       padding: EdgeInsets.only(
                           top: MediaQuery.of(context).size.height / 14),
                       child: const GlowText(
-                        "Score",
+                        'someText',
                         style: TextStyle(
                           fontSize: 38,
                           color: Colors.amber,

@@ -100,8 +100,12 @@ class _assignment1State extends State<assignment1> {
   ];
   //======================================================================================================================
   var _questionIndex = 0;
-  void _answerQuestion() {
+
+   var totalScore = 0;
+  void _answerQuestion(int score) {
+    score = totalScore + score;
     setState(() {
+
       _questionIndex = _questionIndex + 1;
     });
 
@@ -128,9 +132,9 @@ class _assignment1State extends State<assignment1> {
               Questions(
                 questions[_questionIndex]['question'] as String,
               ),
-              ...(questions[_questionIndex]['answer'] as List<String>)
+              ...(questions[_questionIndex]['answer'] as List<Map<String, Object>>)
                   .map((answer) {
-                return Answer(_answerQuestion, answer);
+                return Answer(() => _answerQuestion(answer[ 'score']) , answer['text'] as String);
               }).toList()
             ],
         ) : finalPage(),
