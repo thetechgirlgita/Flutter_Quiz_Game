@@ -81,7 +81,7 @@ class _assignment1State extends State<assignment1> {
           title: GlowText(
             "Computer's Basic Quiz",
             style: TextStyle(
-              color: Appbar,
+              color: Apbar,
             ),
           ),
           centerTitle: true,

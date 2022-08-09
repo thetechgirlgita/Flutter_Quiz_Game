@@ -18,7 +18,7 @@ class Questions extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 25,
-            color: Appbar,
+            color: Apbar,
           ),
           textAlign: TextAlign.center,
         )
