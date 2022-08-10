@@ -14,7 +14,7 @@ class Questions extends StatelessWidget {
       margin: const EdgeInsets.all(20),
       child: Column(children: [
         Text(
-          QuestionText,
+         QuestionText,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 25,
