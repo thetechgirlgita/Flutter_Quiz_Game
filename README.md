@@ -1,4 +1,4 @@
-# assignment1
+# Flutter Quiz Game
 
 A new Flutter application.
 
