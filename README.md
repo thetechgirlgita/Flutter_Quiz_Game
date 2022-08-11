@@ -1,6 +1,6 @@
 # Flutter Quiz Game
 
-A new Flutter application.
+A new mini Flutter application.
 
 ## Getting Started
 
